@@ -1,0 +1,238 @@
+@import 'template';
+
+/*# sourceMappingURL=stall.css.map */
+
+
+/**********TOGGLE CLASSES***********/
+.dim {
+  background-color: rgba(0,0,0,0.8); 
+  color: white;
+  background-size: cover;
+}
+
+.largify {
+  font-size:  1.15em;
+  text-align: center;
+  font-weight:  bold; 
+  }
+
+.tagIt {
+  font-family: 'Tagtype-Freefont';
+}
+
+#ladiesRoom {
+  background: url('../images/stall.jpg') no-repeat top center fixed; 
+  background-size: cover;
+  height: 100vh;
+  max-height: 100%;
+}
+
+#woodRoom {
+    background: url('../images/wood.jpg') no-repeat top center fixed; 
+    background-size: cover;
+    height: 100vh;
+    max-height: 100%;
+    color: white;
+}
+
+#dogRoom {
+    background: url('../images/dog.jpg') no-repeat bottom center fixed; 
+    background-size: cover;
+    /*height: 100vh;*/
+    max-height: 100%;
+}
+
+#defaultRoom {
+    background: url('../images/stallwall2.jpg') no-repeat top center fixed; 
+    background-size: cover;
+    height: 100vh;
+    max-height: 100%;
+}
+
+
+
+/*******************BODY********************/
+
+body { 
+  font-size: 1.125em;
+  background-color: black;
+  font-family: 'PermanentMarker'; 
+  text-align: center;
+}
+
+@font-face {
+    font-family: 'PermanentMarker'; 
+    src: url('PermanentMarker.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Tagtype-Freefont'; 
+    src: url('tagtype-freefont.ttf'); /*URL to font*/
+}
+
+/*********************NAV********************/
+
+#logo {
+  margin-right: 2.5em;
+  font-family: 'Tagtype-Freefont';
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  font-size:  1em;
+  border: .1em inset #112;
+  // height: 1.7em;
+  // right: .2em;
+  z-index: 100;
+  width: 100%;
+  margin: 0 auto;
+  padding:  .5em;
+  // display: block;
+  color:  white;
+  background-color: #111;
+  // background-size: 100%;
+
+nav>div {
+  padding-top: .25em;
+  padding-bottom: .25em;
+}
+
+}
+
+#clear {
+  font-size: .6em;
+  padding: .77em;
+  color:  black;
+  font-family: 'PermanentMarker'; 
+
+}
+
+#input {
+  
+  width: 20em;
+  font-size: .7em;
+  height: 2em;
+}
+
+select {
+  margin-left: 2em;
+  -webkit-appearance: none;
+  font-family: 'PermanentMarker'; 
+  background-color:  black;
+  color:  white;
+  padding: .5em;
+  font-size:  .7em;
+}
+
+/***********************WALL*******************/
+
+.cover {
+  background: url('../images/stallwall2.jpg') no-repeat top center fixed; 
+  background-size: cover;
+  height:  100vh;
+}
+
+#wrapper {
+  // text-align: center;
+  // position: relative;
+  // top: 3em;
+  // font-size: .8em;
+  height: 100%;
+  padding-top: 15vh;
+}
+
+/* Bubble Float Left */
+.btn {
+font-family: 'PermanentMarker'; 
+margin-left: 2em;
+padding-left: 1em;
+border: .3em solid black;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.btn:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: calc(50% - 10px);
+  left: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #e1e1e1 transparent transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.btn:hover, .hvr-bubble-float-left:focus, .btn:active {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+  background-color: red;
+}
+
+.btn:hover:before, .hvr-bubble-float-left:focus:before, .btn:active:before {
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+    background-color: red;
+}
+
+/*****************GLOW***************/
+
+
+.msg {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(10, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.9s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+
+.msg:hover, .msg:focus, .msg:active {
+  box-shadow: 0 0 15px rgba(8, 4, 50, 0.6);
+}
+
+header {
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 5vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-size: .75em;
+  z-index: 2;
+}
+
+main {
+  height: 95%;
+  overflow-y: auto;
+  z-index: -1;
+}
+
+#output {
+  width: 60%;
+  margin: 0 auto;
+}
