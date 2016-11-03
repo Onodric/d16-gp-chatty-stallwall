@@ -1,41 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Stall | Wall</title>
-	<link rel="stylesheet" href="css/stallwall.css">
-</head>
-<body id="body">
-<div class="cover" id="cover">	
-		<nav>
-			<span id="logo"> S T a l l ˙ W ∆ | | </span>
-			<input id="input" placeholder ="vandalize at will" type="text">  
-			<button id="clear">Destroy the Evidence</button>
-			<input id="dark" type="checkbox"> Dim the Lights
-			<input id="largify" type="checkbox"> Make a Statement
-			<input id="tag" type="checkbox"> tag this stall
-			<select id="switchStalls"> 
-	  			<option id="default">Switch Stalls</option>
-	  			<option id="wood">•Luxury Stall</option>
-	  			<option id="ladies">•Ladies' Room</option>
-	  			<option id="dog">•Dog in your Stall</option>
-			</select>
-
-		</nav>
-
-		<div id="wrapper">
-		
-			<h2> SPREAD THE WORD: </h2> 
-			<div id="output"> </div> 
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Stall | Wall</title>
+		<link rel="stylesheet" href="css/stallwall.css">
+	</head>
+	<body id="body">
+		<div class="cover" id="default">
+			<header>	
+				<nav>
+					<div>
+						<span id="logo"> S T a l l ˙ W ∆ | | </span>
+						<input id="input" placeholder ="vandalize at will" type="text">
+						<button id="clear">Destroy the Evidence</button>
+					</div>
+					<div>
+						<input id="dark" type="checkbox"><label for="dark"> Dim the Lights</label>
+						<input id="largify" type="checkbox"><label for="largify"> Make a Statement</label>
+						<input id="tag" type="checkbox"><label for="tag"> Tag this stall</label>
+						<select id="switchStalls"> 
+			  			<option id="none" selected disabled>Switch Stalls</option>
+			  			<option id="default">Airport</option>
+			  			<option id="wood">Luxury Stall</option>
+			  			<option id="ladies">Ladies' Room</option>
+				  		<option id="dog">Dog in your Stall</option>
+						</select>
+					</div>
+				</nav>
+			</header>
+			<main>
+				<div id="wrapper">
+					<h2> SPREAD THE WORD: </h2>
+					<div id="output">
+						
+					</div> 
+				</div>
+			</main>
+			<footer>
+				<p>&copy; 450 b.c.e - 2016 c.e. American Standard Corporation</p>
+			</footer>
 		</div>
-	
-	</div>
-	<script type="text/javascript" src= "javascripts/chatty.js"></script>
-	<script src="javascripts/stallwall.js"></script>
-	<script src="javascripts/data.js"></script>
-	<script src="javascripts/xhr.js"></script>
-	<script src='javascripts/add.js'></script>	
-</body>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="javascripts/JSONHandler.js"></script>
+		<script src="javascripts/ArrayHandler.js"></script>
+		<script src='javascripts/MainStall.js'></script>	
+	</body>
 </html>
+
+
+<!-- 
+### Navigation bar
+
+1. Create an element to serve as the navigation bar for your application.
+1. Create an element to hold the logo for your application. It can be as simple as text, but if you want to find an image, that's fine.
+1. Create a input field for a user to enter in a message.
+1. Add an event listener for "keypress" and detect when then return key has been pressed in the message field.
+1. When return key is detected, you'll create a new message (*see details below*).
+1. Create a button to clear all messages.
+1. When the user clicks the clear messages button, all current chat messages should be removed from the application.
+1. If there are no messages, then the clear messages button should be disabled (*see example above*).
+1. The navigation bar should remain at the top of the screen, even if the contents of the page start to scroll.
+
+### Options
+
+1. Create two checkboxes below the message input field. One labeled "Dark theme" and the other labeled "Large text".
+1. When the user clicks on the dark theme checkbox, change the background color of your application to a dark gray, and the font color for messages should be white(ish)... you pick.
+1. If the user unchecks the box, the background color should change back to white with black text for messages.
+ -->
